@@ -1,0 +1,4 @@
+*.pdf
+diag*
+.asciidoctor/
+build/
