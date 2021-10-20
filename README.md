@@ -13,7 +13,7 @@ that has PlantUML diagrams
 
   ```bash
   $ [sudo] gem install asciidoctor asciidoctor-diagram asciidoctor-pdf \
-                      asciidoctor-diagram-plantuml
+                       asciidoctor-diagram-plantuml
   ```
 
 - Generate pdf book
