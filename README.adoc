@@ -10,6 +10,14 @@ Gitlab.com{wj}footnote:[PlantUML demo: https://gitlab.com/adrianovieira/plantuml
 
 == Getting started
 
+=== Simple sample files
+
+* Markdown: link:PlantUML.md[]
+* AsciiDoc sections:
+  ** main: link:PlantUML.adoc[]
+  ** UML Sequence diagram: link:PlantUML-sample.adoc[]
+  ** C4Model diagram: link:PlantUML-c4model.adoc[]
+
 === AsciiDoc artifacts
 
 .Install Asciidoctor
