@@ -23,3 +23,11 @@ that has PlantUML diagrams
                     -r asciidoctor-diagram \
                     -D build
   ```
+
+- Open generated pdf file
+
+  ```bash
+  build
+  └── PlantUML.pdf
+
+  ```
