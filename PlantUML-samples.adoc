@@ -1,5 +1,6 @@
-=== PlantUML sample Sequence Diagram
+=== PlantUML samples
 
+.Sequence Diagram
 [plantuml]
 ----
 Alice -> Bob: Authentication Request
@@ -9,6 +10,7 @@ Alice -> Bob: Another authentication Request
 Alice <-- Bob: Another authentication Response
 ----
 
+.Sequence Diagram with actor and participant
 [plantuml]
 ----
 actor Bob #red

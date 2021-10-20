@@ -1,5 +1,7 @@
+<<<
 === C4 Model Diagram
 
+.sample diagram
 [plantuml]
 ----
 !include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Container.puml
@@ -14,8 +16,10 @@ Rel(admin, web_app, "Uses", "HTTPS")
 Rel(web_app, twitter, "Gets tweets from", "HTTPS")
 ----
 
+<<<
 ==== C4 Model Diagram (decorated)
 
+.decoreted diagram
 [plantuml]
 ----
 !include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Container.puml
