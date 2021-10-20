@@ -1,0 +1,12 @@
+---
+build pdf book:
+  image: asciidoctor/docker-asciidoctor:1.12
+  artifacts:
+    expire_in: 7days
+    paths:
+      - build/PlantUML.pdf
+  script:
+    - asciidoctor-pdf --require asciidoctor-diagram
+                      --destination-dir build
+                      --out-file PlantUML.pdf
+                      PlantUML.adoc
