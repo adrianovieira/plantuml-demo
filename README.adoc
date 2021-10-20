@@ -1,19 +1,28 @@
 = PlantUML demo
 
-A repo to demonstrate how to generate markdown or asciidoc documents
-that has PlantUML diagrams - repo upstream on Gitlab.com (https://gitlab.com/adrianovieira/plantuml-demo)
+This repo demonstrate how to generate document formating by using
+markdown{empty}footnote:[Markdown: https://en.wikipedia.org/wiki/Markdown[]] or
+AsciiDoc{empty}footnote:asciidoc[AsciiDoc: https://en.wikipedia.org/wiki/AsciiDoc[]]
+documents that has PlantUML diagrams - upstream repo on
+Gitlab.com{empty}footnote:[PlantUML demo: https://gitlab.com/adrianovieira/plantuml-demo[]].
 
 > _PlantUML is a component that allows to quickly write both UML or non-UML diagrams_ - https://plantuml.com[PlantUML.com]
 
 == Getting started
 
-=== Asciidoc artifacts
+=== AsciiDoc{empty}footnote:asciidoc[] artifacts
 
-.Install asciidoctor
+.Install Asciidoctor
 [source, bash]
 ----
 $ [sudo] gem install asciidoctor asciidoctor-diagram asciidoctor-pdf \
                       asciidoctor-diagram-plantuml
+----
+
+.Install GraphViz
+[source, bash]
+----
+$ sudo dnf|apt install -y graphviz
 ----
 
 .Generate pdf book
