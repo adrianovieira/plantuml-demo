@@ -10,7 +10,7 @@ Gitlab.com{empty}footnote:[PlantUML demo: https://gitlab.com/adrianovieira/plant
 
 == Getting started
 
-=== AsciiDoc{empty}footnote:asciidoc[] artifacts
+=== AsciiDoc artifacts
 
 .Install Asciidoctor
 [source, bash]
