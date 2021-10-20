@@ -1,10 +1,10 @@
 = PlantUML demo
 
 This repo demonstrate how to generate document formating by using
-markdown{empty}footnote:[Markdown: https://en.wikipedia.org/wiki/Markdown[]] or
-AsciiDoc{empty}footnote:asciidoc[AsciiDoc: https://en.wikipedia.org/wiki/AsciiDoc[]]
+markdown{wj}footnote:[Markdown: https://en.wikipedia.org/wiki/Markdown[]] or
+AsciiDoc{wj}footnote:[AsciiDoc: https://en.wikipedia.org/wiki/AsciiDoc[]]
 documents that has PlantUML diagrams - upstream repo on
-Gitlab.com{empty}footnote:[PlantUML demo: https://gitlab.com/adrianovieira/plantuml-demo[]].
+Gitlab.com{wj}footnote:[PlantUML demo: https://gitlab.com/adrianovieira/plantuml-demo[]].
 
 > _PlantUML is a component that allows to quickly write both UML or non-UML diagrams_ - https://plantuml.com[PlantUML.com]
 
