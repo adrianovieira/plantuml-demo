@@ -15,7 +15,7 @@ Gitlab.com{wj}footnote:[PlantUML demo: https://gitlab.com/adrianovieira/plantuml
 * Markdown: link:PlantUML.md[]
 * AsciiDoc sections:
   ** main: link:PlantUML.adoc[]
-  ** UML Sequence diagram: link:PlantUML-sample.adoc[]
+  ** UML Sequence diagram: link:PlantUML-samples.adoc[]
   ** C4Model diagram: link:PlantUML-c4model.adoc[]
 
 === AsciiDoc artifacts
