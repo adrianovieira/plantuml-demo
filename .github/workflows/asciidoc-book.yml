@@ -4,6 +4,7 @@ on: push
 
 jobs:
   build:
+    name: build pdf book
     runs-on: ubuntu-latest
     container: asciidoctor/docker-asciidoctor:1.12
     steps:
