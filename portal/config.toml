@@ -1,0 +1,13 @@
+baseURL = 'http://example.org/'
+languageCode = 'en-us'
+title = 'PlantUML demo'
+theme = "docsy"
+
+[languages]
+[languages.en]
+languageName ="Português brasileiro"
+contentDir = "content/en"
+svg_image_url = "https://www.plantuml.com/plantuml/svg/"
+
+[params.plantuml]
+enable = true

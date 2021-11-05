@@ -2,3 +2,7 @@
 diag*
 .asciidoctor/
 build/
+
+node_modules/
+public/
+resources/
