@@ -5,11 +5,14 @@ build pdf book:
     expire_in: 7days
     paths:
       - build/PlantUML.pdf
+      - build/PlantUML.epub
   script:
     - asciidoctor-pdf --require asciidoctor-diagram
                       --destination-dir build
-                      --out-file PlantUML.pdf
                       PlantUML.adoc
+    - asciidoctor-epub3 --require asciidoctor-diagram
+                        --destination-dir build
+                        PlantUML.adoc
 pages:
   stage: deploy
   image: alpine:3.14
