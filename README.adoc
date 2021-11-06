@@ -18,6 +18,27 @@ Gitlab.com{wj}footnote:[PlantUML demo (upstream repo): https://gitlab.com/adrian
   ** UML Sequence diagram: link:PlantUML-samples.adoc[]
   ** C4Model diagram: link:PlantUML-c4model.adoc[]
 
+=== Pages
+
+A sample portal is deployed at https://adrianovieira.gitlab.io/plantuml-demo
+
+Tecnologies::
+* Hugo-0.83+{wj}footnote:[Hugo: https://gohugo.io[]]: A static site generator
+* Docsy theme{wj}footnote:[Docsy: https://www.docsy.dev[]]: A Hugo theme for creating great technical documentation sites
+
+Requirements::
+* git submodule update: if you wanna give it a try locally
++
+[source, bash]
+----
+$ git submodule update --init --recursive
+$ cd portal
+
+$ # before you run the command bellow,
+$ # take a look in pages job on .gitlab-ci.yml to check how to update portal/content
+$ hugo server
+----
+
 === AsciiDoc artifacts
 
 .Install Asciidoctor
@@ -38,7 +59,6 @@ $ sudo dnf|apt install -y graphviz
 ----
 $ asciidoctor-pdf PlantUML.adoc \
                   -r asciidoctor-diagram \
-                  -a sourcedir=./ \
                   -D build
 ----
 
