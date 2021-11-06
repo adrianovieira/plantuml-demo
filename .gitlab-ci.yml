@@ -34,7 +34,7 @@ pages:
     - git submodule update --init --recursive
 
   script:
-    - hugo --gc --destination ../public
+    - hugo --gc --destination ../public --baseURL ${PAGES_BASE_URL}
   artifacts:
     paths:
     - public
