@@ -16,8 +16,13 @@ jobs:
                             --destination-dir build \
                             --out-file PlantUML.pdf \
                             PlantUML.adoc
+          asciidoctor-epub3 --require asciidoctor-diagram \
+                              --destination-dir build \
+                              PlantUML.adoc
       - name: Upload pdf file
         uses: actions/upload-artifact@v2
         with:
           name: PlantUML book
-          path: build/PlantUML.pdf
+          path: |
+            build/PlantUML.pdf
+            build/PlantUML.epub
