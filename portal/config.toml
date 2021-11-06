@@ -11,3 +11,41 @@ svg_image_url = "https://www.plantuml.com/plantuml/svg/"
 
 [params.plantuml]
 enable = true
+
+[params.links]
+# End user relevant links. These will show up on left side of footer and in the community page if you have one.
+[[params.links.user]]
+	name = "Hugo"
+	url = "https://gohugo.io"
+	icon = "fas fa-code"
+  desc = "Hugo portal"
+
+[[params.links.user]]
+	name = "Docsy"
+	url = "https://www.docsy.dev"
+	icon = "fas fa-book"
+  desc = "Docsy portal"
+
+[[params.links.developer]]
+	name = "AdrianoVieira Portal"
+	url = "https://adrianovieira.gitlab.io"
+	icon = "fab fa-dev"
+  desc = "Some blog posts"
+
+[[params.links.developer]]
+	name = "I'm on Gitlab"
+	url = "https://github.com/adrianovieira"
+	icon = "fab fa-gitlab"
+  desc = "Github repos"
+
+[[params.links.developer]]
+	name = "I'm also there"
+	url = "https://github.com/adrianovieira"
+	icon = "fab fa-github"
+  desc = "Github repos"
+
+[[params.links.developer]]
+	name = "Source code of this Portal"
+	url = "https://gitlab.com/adrianovieira/plantuml-demo"
+	icon = "fab fa-gitlab"
+  desc = "The magic thing!"
