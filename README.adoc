@@ -45,7 +45,7 @@ $ hugo server
 [source, bash]
 ----
 $ [sudo] gem install asciidoctor asciidoctor-diagram asciidoctor-pdf \
-                      asciidoctor-diagram-plantuml
+                     asciidoctor-diagram-plantuml asciidoctor-epub3
 ----
 
 .Install GraphViz
@@ -62,9 +62,18 @@ $ asciidoctor-pdf PlantUML.adoc \
                   -D build
 ----
 
-.Open generated pdf file
+.Generate epub book
+[source, bash]
+----
+$ asciidoctor-epub3 PlantUML.adoc \
+                  -r asciidoctor-diagram \
+                  -D build
+----
+
+.Open generated files
 [source, bash]
 ----
 build
+├── PlantUML.epub
 └── PlantUML.pdf
 ----
