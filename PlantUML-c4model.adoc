@@ -45,3 +45,11 @@ Rel(web_app, twitter, "Gets tweets from", "HTTPS")
 ----
 include::{sourcedir}PlantUML-c4model-decoreted.puml[]
 ----
+
+Sample with tag dependent sprites and custom legend text, for example:
+
+.decoreted diagram with tags
+[source, plantuml]
+----
+include::{sourcedir}PlantUML-c4model-decoreted-tags.puml[]
+----
