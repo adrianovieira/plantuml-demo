@@ -38,6 +38,7 @@ $ sudo dnf|apt install -y graphviz
 ----
 $ asciidoctor-pdf PlantUML.adoc \
                   -r asciidoctor-diagram \
+                  -a sourcedir=./ \
                   -D build
 ----
 

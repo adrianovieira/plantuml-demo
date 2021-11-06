@@ -8,12 +8,14 @@ menu:
   main:
     weight: 20
 ---
+:sourcedir: ./assets/
 
 = PlantUML
 
 == PlantUML sample Diagram
 
 ////
+
 === PlantUML samples
 
 .Sequence Diagram
@@ -45,4 +47,10 @@ Alice->Bob: Authentication Request
 Bob->Alice: Authentication Response
 Bob->L: Log transaction
 @enduml
+----
+
+.Class Diagram
+[plantuml, target=diagram-classes, format=png]
+----
+include::{sourcedir}PlantUML-samples-class.puml[]
 ----
