@@ -31,6 +31,8 @@ pages:
 
     - npm install
 
+    - git submodule update --init --recursive
+
   script:
     - hugo --gc --destination ../public
   artifacts:
