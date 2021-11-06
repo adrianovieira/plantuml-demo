@@ -2,19 +2,20 @@
 ---
 date: 2021-11-19:50:19-03:00
 title: "UML samples"
+description: "Some sample examples of UML diagrams"
 hide_feedback: false
 weight: 20
 menu:
   main:
     weight: 20
 ---
-:sourcedir: ./assets/
 
 = PlantUML
 
 == PlantUML sample Diagram
 
 ////
+:sourcedir: ./assets/
 
 === PlantUML samples
 
