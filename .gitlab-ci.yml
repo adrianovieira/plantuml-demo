@@ -17,17 +17,15 @@ pages:
     - apk update
     - apk add openssl git tzdata asciidoctor nodejs npm hugo
 
+    - cp assets/*.puml portal/assets
+
+    - cp PlantUML-c4model.adoc portal/content/en/docs/
+    - cp PlantUML-samples.adoc portal/content/en/docs/
+
+    - find portal/content -name "*.adoc" -type f -exec sed -i 's/\[plantuml/\[source, plantuml/' {} +
+    - find portal/content -name "*.adoc" -type f -exec sed -i '/\/\/\/\//d' {} +
+
     - cd portal
-
-    - cp ../assets/*.puml assets
-
-    - cp ../PlantUML-c4model.adoc content/en/docs/PlantUML-c4model.adoc
-    - sed -e '/\/\/\/\//d' -i content/en/docs/PlantUML-c4model.adoc
-    - sed -e 's/\[plantuml/\[source, plantuml/' -i content/en/docs/PlantUML-c4model.adoc
-
-    - cp ../PlantUML-samples.adoc content/en/docs/
-    - sed -e '/\/\/\/\//d' -i content/en/docs/PlantUML-samples.adoc
-    - sed -e 's/\[plantuml/\[source, plantuml/' -i content/en/docs/PlantUML-samples.adoc
 
     - npm install
 
