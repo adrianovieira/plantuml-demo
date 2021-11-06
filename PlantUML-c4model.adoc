@@ -1,9 +1,26 @@
+////
+---
+date: 2021-11-19:50:19-03:00
+title: "C4 Model"
+hide_feedback: false
+weight: 20
+menu:
+  main:
+    weight: 20
+---
+
+= PlantUML
+
+== PlantUML sample Diagram
+
+////
 <<<
 === C4 Model Diagram
 
 .sample diagram
 [plantuml]
 ----
+@startuml
 !include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Container.puml
 
 Person(admin, "Administrator")
@@ -14,6 +31,7 @@ System(twitter, "Twitter")
 
 Rel(admin, web_app, "Uses", "HTTPS")
 Rel(web_app, twitter, "Gets tweets from", "HTTPS")
+@enduml
 ----
 
 <<<
@@ -22,6 +40,7 @@ Rel(web_app, twitter, "Gets tweets from", "HTTPS")
 .decoreted diagram
 [plantuml]
 ----
+@startuml
 !include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Container.puml
 
 !define DEVICONS https://raw.githubusercontent.com/tupadr3/plantuml-icon-font-sprites/master/devicons
@@ -41,4 +60,5 @@ ContainerDb(db, "Database", "Microsoft SQL", "Holds product, order and invoice i
 Rel(user, spa, "Uses", "https")
 Rel(spa, api, "Uses", "https")
 Rel_R(api, db, "Reads/Writes")
+@enduml
 ----

@@ -1,18 +1,37 @@
+////
+---
+date: 2021-11-19:50:19-03:00
+title: "UML samples"
+hide_feedback: false
+weight: 20
+menu:
+  main:
+    weight: 20
+---
+
+= PlantUML
+
+== PlantUML sample Diagram
+
+////
 === PlantUML samples
 
 .Sequence Diagram
 [plantuml]
 ----
+@startuml
 Alice -> Bob: Authentication Request
 Bob --> Alice: Authentication Response
 
 Alice -> Bob: Another authentication Request
 Alice <-- Bob: Another authentication Response
+@enduml
 ----
 
 .Sequence Diagram with actor and participant
 [plantuml]
 ----
+@startuml
 actor Bob #red
 ' The only difference between actor
 'and participant is the drawing
@@ -25,4 +44,5 @@ participant "I have a really\nlong name" as L #99FF99
 Alice->Bob: Authentication Request
 Bob->Alice: Authentication Response
 Bob->L: Log transaction
+@enduml
 ----
