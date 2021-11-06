@@ -10,3 +10,31 @@ build pdf book:
                       --destination-dir build
                       --out-file PlantUML.pdf
                       PlantUML.adoc
+pages:
+  stage: deploy
+  image: alpine:3.14
+  before_script:
+    - apk update
+    - apk add openssl git tzdata asciidoctor nodejs npm hugo
+
+    - cd portal
+
+    - cp ../assets/*.puml assets
+
+    - cp ../PlantUML-c4model.adoc content/en/docs/PlantUML-c4model.adoc
+    - sed -e '/\/\/\/\//d' -i content/en/docs/PlantUML-c4model.adoc
+    - sed -e 's/\[plantuml/\[source, plantuml/' -i content/en/docs/PlantUML-c4model.adoc
+
+    - cp ../PlantUML-samples.adoc content/en/docs/
+    - sed -e '/\/\/\/\//d' -i content/en/docs/PlantUML-samples.adoc
+    - sed -e 's/\[plantuml/\[source, plantuml/' -i content/en/docs/PlantUML-samples.adoc
+
+    - npm install
+
+  script:
+    - hugo --gc --destination ../public
+  artifacts:
+    paths:
+    - public
+  only:
+  - main
