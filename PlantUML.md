@@ -1,4 +1,18 @@
+<!---md
+---
+date: 2021-11-19:50:19-03:00
+title: "Samples Diagrams.md"
+description: "Some sample examples of UML/C4Model/MindMap diagrams in Markdown"
+hide_feedback: false
+weight: 05
+menu:
+  main:
+    weight: 05
+---
+md--->
 # PlantUML demo
+
+> *"PlantUML in a nutshell. PlantUML is a component that allows to quickly write: Sequence diagram. Usecase diagram. Class diagram. Object diagram. Activity diagram (here is the legacy syntax) Component diagram. Deployment diagram"* - [PlantUML.com](http://PlantUML.com).
 
 ## Getting started
 
@@ -31,7 +45,30 @@ Bob->Alice: Authentication Response
 Bob->L: Log transaction
 ```
 
+### MindMap Diagram
+
+- Mindmap OrgMode syntax
+
+```plantuml
+@startmindmap
+* Debian
+** Ubuntu
+*** Linux Mint
+*** Kubuntu
+*** Lubuntu
+*** KDE Neon
+** LMDE
+** SolydXK
+** SteamOS
+** Raspbian with a very long name
+*** <s>Raspmbc</s> => OSMC
+*** <s>Raspyfi</s> => Volumio
+@endmindmap
+```
+
 ### C4 Model Diagram
+
+> *"The C4 model was designed to help describe, document, and diagram custom-built, bespoke software systems. From this perspective, the C4 model can be used to describe a variety of software architectures (monolithic or distributed), built in a variety of programming languages, deployed on a variety of platforms (on-premises or cloud)"* - [C4Model.com](http://C4Model.com).
 
 ```plantuml
 !include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Container.puml

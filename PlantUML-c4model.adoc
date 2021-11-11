@@ -1,8 +1,8 @@
 ////
 ---
 date: 2021-11-19:50:19-03:00
-title: "C4 Model"
-description: "Some sample examples of C4 Model diagrams"
+title: "C4 Model.adoc"
+description: "Some sample examples of C4 Model diagrams in Asciidoc"
 hide_feedback: false
 weight: 20
 menu:
@@ -19,6 +19,8 @@ menu:
 
 <<<
 === C4 Model Diagram
+
+> _"The C4 model was designed to help describe, document, and diagram custom-built, bespoke software systems. From this perspective, the C4 model can be used to describe a variety of software architectures (monolithic or distributed), built in a variety of programming languages, deployed on a variety of platforms (on-premises or cloud)"_ - http://C4Model.com[C4Model.com].
 
 .sample diagram
 [plantuml]

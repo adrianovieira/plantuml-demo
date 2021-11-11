@@ -1,13 +1,13 @@
 ////
 ---
 date: 2021-11-19:50:19-03:00
-title: "UML samples"
-description: "Some sample examples of UML diagrams"
+title: "UML samples.adoc"
+description: "Some sample examples of UML diagrams in Asciidoc"
 hide_feedback: false
-weight: 05
+weight: 15
 menu:
   main:
-    weight: 05
+    weight: 15
 ---
 
 = PlantUML
@@ -16,8 +16,12 @@ menu:
 
 ////
 :sourcedir: ./assets/
+:toc:
+:toclevels: 4
 
 === PlantUML samples
+
+> _"PlantUML in a nutshell. PlantUML is a component that allows to quickly write: Sequence diagram. Usecase diagram. Class diagram. Object diagram. Activity diagram (here is the legacy syntax) Component diagram. Deployment diagram"_ - http://PlantUML.com[PlantUML.com].
 
 .Sequence Diagram
 [plantuml]
@@ -54,4 +58,25 @@ Bob->L: Log transaction
 [plantuml, target=diagram-classes, format=png]
 ----
 include::{sourcedir}PlantUML-samples-class.puml[]
+----
+
+=== MindMap Diagram
+
+.Mindmap OrgMode syntax
+[plantuml]
+----
+@startmindmap
+* Debian
+** Ubuntu
+*** Linux Mint
+*** Kubuntu
+*** Lubuntu
+*** KDE Neon
+** LMDE
+** SolydXK
+** SteamOS
+** Raspbian with a very long name
+*** <s>Raspmbc</s> => OSMC
+*** <s>Raspyfi</s> => Volumio
+@endmindmap
 ----
