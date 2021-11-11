@@ -7,10 +7,10 @@ theme = "docsy"
 [languages.en]
 languageName ="Português brasileiro"
 contentDir = "content/en"
-svg_image_url = "https://www.plantuml.com/plantuml/svg/"
 
 [params.plantuml]
 enable = true
+svg_image_url = "https://www.plantuml.com/plantuml/svg/"
 
 [params.links]
 # End user relevant links. These will show up on left side of footer and in the community page if you have one.
