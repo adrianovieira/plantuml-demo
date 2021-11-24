@@ -57,7 +57,8 @@ $ sudo dnf|apt install -y graphviz
 .Generate pdf book
 [source, bash]
 ----
-$ asciidoctor-pdf PlantUML.adoc \
+$ asciidoctor-pdf content/en/docs/PlantUML.adoc \
+                  -a sourcedir=../../../assets/ \
                   -r asciidoctor-diagram \
                   -D build
 ----
@@ -65,7 +66,8 @@ $ asciidoctor-pdf PlantUML.adoc \
 .Generate epub book
 [source, bash]
 ----
-$ asciidoctor-epub3 PlantUML.adoc \
+$ asciidoctor-epub3 content/en/docs/PlantUML.adoc \
+                  -a sourcedir=../../../assets/ \
                   -r asciidoctor-diagram \
                   -D build
 ----
