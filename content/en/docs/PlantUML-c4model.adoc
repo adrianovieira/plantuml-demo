@@ -5,9 +5,11 @@ title: "C4 Model.adoc"
 description: "Some sample examples of C4 Model diagrams in Asciidoc"
 hide_feedback: false
 weight: 20
+icon: fas fa-project-diagram
 menu:
   main:
     weight: 20
+    pre: <i class="fas fa-project-diagram"></i>
 ---
 
 = PlantUML
