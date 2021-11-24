@@ -5,10 +5,11 @@ title: "Samples Diagrams.md"
 description: "Some sample examples of UML/C4Model/MindMap diagrams in Markdown"
 hide_feedback: false
 toc_hide: true
-weight: 05
+weight: 10
 menu:
   main:
-    weight: 05
+    weight: 10
+    pre: <i class='fas fa-chart-line'></i>
 ---
 md--->
 # PlantUML demo
