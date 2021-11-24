@@ -12,11 +12,11 @@ Gitlab.com{wj}footnote:[PlantUML demo (upstream repo): https://gitlab.com/adrian
 
 === Simple sample files
 
-* Markdown: link:PlantUML.md[]
+* Markdown: link:content/en/docs/PlantUML.md[]
 * AsciiDoc sections:
-  ** main: link:PlantUML.adoc[]
-  ** UML Sequence diagram: link:PlantUML-samples.adoc[]
-  ** C4Model diagram: link:PlantUML-c4model.adoc[]
+  ** main: link:content/en/docs/PlantUML.adoc[]
+  ** UML Sequence diagram: link:content/en/docs/PlantUML-samples.adoc[]
+  ** C4Model diagram: link:content/en/docs/PlantUML-c4model.adoc[]
 
 === Pages
 
