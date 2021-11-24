@@ -8,11 +8,13 @@ build pdf book:
       - build/PlantUML.epub
   script:
     - asciidoctor-pdf --require asciidoctor-diagram
+                      --attribute sourcedir=../../../assets/
                       --destination-dir build
-                      PlantUML.adoc
+                      content/en/docs/PlantUML.adoc
     - asciidoctor-epub3 --require asciidoctor-diagram
+                        --attribute sourcedir=../../../assets/
                         --destination-dir build
-                        PlantUML.adoc
+                        content/en/docs/PlantUML.adoc
 pages:
   stage: deploy
   image: alpine:3.14
@@ -20,25 +22,17 @@ pages:
     - apk update
     - apk add openssl git tzdata asciidoctor nodejs npm hugo
 
-    - cp assets/*.puml portal/assets
-
-    - cp PlantUML-c4model.adoc portal/content/en/docs/
-    - cp PlantUML-samples.adoc portal/content/en/docs/
-    - cp PlantUML.md portal/content/en/docs/
-
-    - find portal/content -name "*.adoc" -type f -exec sed -i 's/\[plantuml/\[source, plantuml/' {} +
-    - find portal/content -name "*.adoc" -type f -exec sed -i '/\/\/\/\//d' {} +
-    - find portal/content -name "*.md" -type f -exec sed -i '/<!---md/d' {} +
-    - find portal/content -name "*.md" -type f -exec sed -i '/md--->/d' {} +
-
-    - cd portal
+    - find content -name "*.adoc" -type f -exec sed -i 's/\[plantuml/\[source, plantuml/' {} +
+    - find content -name "*.adoc" -type f -exec sed -i '/\/\/\/\//d' {} +
+    - find content -name "*.md" -type f -exec sed -i '/<!---md/d' {} +
+    - find content -name "*.md" -type f -exec sed -i '/md--->/d' {} +
 
     - npm install
 
     - git submodule update --init --recursive
 
   script:
-    - hugo --gc --destination ../public --baseURL ${PAGES_BASE_URL}
+    - hugo --gc --destination ./public --baseURL ${PAGES_BASE_URL}
   artifacts:
     paths:
     - public
