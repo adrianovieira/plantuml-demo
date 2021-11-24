@@ -4,6 +4,7 @@ date: 2021-11-19:50:19-03:00
 title: "Samples Diagrams.md"
 description: "Some sample examples of UML/C4Model/MindMap diagrams in Markdown"
 hide_feedback: false
+toc_hide: true
 weight: 05
 menu:
   main:
