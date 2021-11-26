@@ -1,18 +1,16 @@
+////
 ---
 date: 2021-11-19:50:19-03:00
 title: "UML samples.adoc"
 description: "Some sample examples of UML diagrams in Asciidoc"
 hide_feedback: false
 weight: 15
-menu:
-  main:
-    weight: 15
 ---
-
 = PlantUML
 
 == PlantUML sample Diagram
 
+////
 :sourcedir: ./assets/
 :toc:
 :toclevels: 4
