@@ -1,11 +1,12 @@
 ---
-build pdf book:
+build pdf epub book:
   image: asciidoctor/docker-asciidoctor:1.12
   artifacts:
     expire_in: 7days
     paths:
       - build/PlantUML.pdf
       - build/PlantUML.epub
+  allow_failure: true
   script:
     - asciidoctor-pdf --require asciidoctor-diagram
                       --attribute sourcedir=../../../assets/
