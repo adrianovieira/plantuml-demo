@@ -1,4 +1,3 @@
-////
 ---
 date: 2021-11-19:50:19-03:00
 title: "UML samples.adoc"
@@ -14,7 +13,6 @@ menu:
 
 == PlantUML sample Diagram
 
-////
 :sourcedir: ./assets/
 :toc:
 :toclevels: 4

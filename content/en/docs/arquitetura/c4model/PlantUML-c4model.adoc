@@ -1,4 +1,3 @@
-////
 ---
 date: 2021-11-19:50:19-03:00
 title: "C4 Model.adoc"
@@ -11,7 +10,6 @@ weight: 20
 
 == PlantUML sample Diagram
 
-////
 :sourcedir: ./assets/
 
 <<<
