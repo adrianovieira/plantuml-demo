@@ -1,6 +1,6 @@
 ---
 build pdf epub book:
-  image: asciidoctor/docker-asciidoctor:1.12
+  image: asciidoctor/docker-asciidoctor:1.14
   artifacts:
     expire_in: 7days
     paths:
@@ -19,7 +19,7 @@ build pdf epub book:
 
 pages:
   stage: deploy
-  image: alpine:3.14
+  image: alpine:3.15
   before_script:
     - apk update
     - apk add openssl git tzdata asciidoctor nodejs npm hugo
