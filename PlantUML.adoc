@@ -1,0 +1,7 @@
+= PlantUML
+
+== PlantUML Diagrams
+
+include::content/en/docs/modeling/uml/PlantUML-samples.adoc[]
+
+include::content/en/docs/modeling/c4model/PlantUML-c4model.adoc[]

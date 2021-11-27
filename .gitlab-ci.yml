@@ -11,11 +11,11 @@ build pdf epub book:
     - asciidoctor-pdf --require asciidoctor-diagram
                       --attribute sourcedir=../../../../../assets/
                       --destination-dir build
-                      content/en/docs/modeling/PlantUML.adoc
+                      PlantUML.adoc
     - asciidoctor-epub3 --require asciidoctor-diagram
                         --attribute sourcedir=../../../../../assets/
                         --destination-dir build
-                        content/en/docs/modeling/PlantUML.adoc
+                        PlantUML.adoc
 
 pages:
   stage: deploy
