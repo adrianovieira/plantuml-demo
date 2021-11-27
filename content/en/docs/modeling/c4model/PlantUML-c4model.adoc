@@ -3,7 +3,7 @@ date: 2021-11-19:50:19-03:00
 title: "C4 Model.adoc"
 description: "Some sample examples of C4 Model diagrams in Asciidoc"
 hide_feedback: false
-weight: 20
+weight: 10
 ---
 
 = PlantUML
