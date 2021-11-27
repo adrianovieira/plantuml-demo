@@ -12,11 +12,11 @@ Gitlab.com{wj}footnote:[PlantUML demo (upstream repo): https://gitlab.com/adrian
 
 === Simple sample files
 
-* Markdown: link:content/en/docs/PlantUML.md[]
+* Markdown: link:content/en/docs/modeling/uml/PlantUML.md[]
 * AsciiDoc sections:
-  ** main: link:content/en/docs/PlantUML.adoc[]
-  ** UML Sequence diagram: link:content/en/docs/PlantUML-samples.adoc[]
-  ** C4Model diagram: link:content/en/docs/PlantUML-c4model.adoc[]
+  ** main: link:PlantUML.adoc[]
+  ** UML Sequence diagram: link:content/en/docs/modeling/uml/PlantUML-samples.adoc[PlantUML-samples]
+  ** C4Model diagram: link:content/en/docs/modeling/c4model/PlantUML-c4model.adoc[PlantUML-c4model]
 
 === Pages
 
@@ -57,7 +57,7 @@ $ sudo dnf|apt install -y graphviz
 .Generate pdf book
 [source, bash]
 ----
-$ asciidoctor-pdf content/en/docs/modeling/PlantUML.adoc \
+$ asciidoctor-pdf PlantUML.adoc \
                   -a sourcedir=../../../../../assets/ \
                   -r asciidoctor-diagram \
                   -D build
@@ -66,7 +66,7 @@ $ asciidoctor-pdf content/en/docs/modeling/PlantUML.adoc \
 .Generate epub book
 [source, bash]
 ----
-$ asciidoctor-epub3 content/en/docs/modeling/PlantUML.adoc \
+$ asciidoctor-epub3 PlantUML.adoc \
                   -a sourcedir=../../../../../assets/ \
                   -r asciidoctor-diagram \
                   -D build
