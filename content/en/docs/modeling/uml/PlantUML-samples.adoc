@@ -1,3 +1,4 @@
+////
 ---
 date: 2021-11-19:50:19-03:00
 title: "UML samples.adoc"
@@ -8,6 +9,7 @@ weight: 15
 = PlantUML
 
 == PlantUML sample Diagram
+////
 
 :sourcedir: ./assets/
 :toc:

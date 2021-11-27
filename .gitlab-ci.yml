@@ -9,13 +9,14 @@ build pdf epub book:
   allow_failure: true
   script:
     - asciidoctor-pdf --require asciidoctor-diagram
-                      --attribute sourcedir=../../../assets/
+                      --attribute sourcedir=../../../../../assets/
                       --destination-dir build
-                      content/en/docs/PlantUML.adoc
+                      content/en/docs/modeling/PlantUML.adoc
     - asciidoctor-epub3 --require asciidoctor-diagram
-                        --attribute sourcedir=../../../assets/
+                        --attribute sourcedir=../../../../../assets/
                         --destination-dir build
-                        content/en/docs/PlantUML.adoc
+                        content/en/docs/modeling/PlantUML.adoc
+
 pages:
   stage: deploy
   image: alpine:3.14
