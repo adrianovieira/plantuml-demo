@@ -12,6 +12,13 @@ contentDir = "content/en"
 enable = true
 svg_image_url = "https://www.plantuml.com/plantuml/svg/"
 
+[[menu.main]]
+	name = "Source code"
+	url = "https://gitlab.com/adrianovieira/plantuml-demo"
+    desc = "The magic thing!"
+	pre = "<i class='fab fa-gitlab'></i>"
+    post = "<span class='alert'>New!</span>"
+
 [params.links]
 # End user relevant links. These will show up on left side of footer and in the community page if you have one.
 [[params.links.user]]
