@@ -1,0 +1,47 @@
+name: github pages
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          submodules: recursive
+          fetch-depth: 0
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: 'latest'
+          extended: true
+
+      - name: Install ubuntu packages
+        run: |
+          apt-get update
+          apt-get install --quiet --assume-yes asciidoctor nodejs npm
+
+      - name: Install node modules
+        run: |
+          npm install
+
+      - name: Prepare docs to build pages
+        run: |
+          find content -name "*.adoc" -type f -exec sed -i 's/\[plantuml/\[source, plantuml/' {} +
+          find content -name "*.adoc" -type f -exec sed -i '/\/\/\/\//d' {} +
+          find content -name "*.md" -type f -exec sed -i '/<!---md/d' {} +
+          find content -name "*.md" -type f -exec sed -i '/md--->/d' {} +
+
+      - name: Build
+        run: hugo --minify
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        if: github.ref == 'refs/heads/main'
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public
