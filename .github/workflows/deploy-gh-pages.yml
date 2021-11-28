@@ -24,8 +24,19 @@ jobs:
       - name: install ubuntu extra packages
         run: |
           sudo apt-get -q update
-          sudo apt-get install -qy asciidoctor
+          sudo apt-get install --quiet --assume-yes asciidoctor
 
+      - name: install node modules
+        run: |
+          npm install
+
+      - name: prepare asciidoc documents
+        run: |
+          find content -name "*.adoc" -type f -exec sed -i 's/\[plantuml/\[source, plantuml/' {} +
+          find content -name "*.adoc" -type f -exec sed -i '/\/\/\/\//d' {} +
+          find content -name "*.md" -type f -exec sed -i '/<!---md/d' {} +
+          find content -name "*.md" -type f -exec sed -i '/md--->/d' {} +
+          
       - name: Build
         run: hugo --minify
 
