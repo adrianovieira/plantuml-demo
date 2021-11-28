@@ -21,6 +21,11 @@ jobs:
           hugo-version: 'latest'
           extended: true
 
+      - name: install ubuntu extra packages
+        run: |
+          sudo apt-get -q update
+          sudo apt-get install -qy asciidoctor
+
       - name: Build
         run: hugo --minify
 
