@@ -1,4 +1,4 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>PlantUML demo – UML Modeling</title><link>http://adrianovieira.github.io/plantuml-demo/docs/modeling/uml/</link><description>Recent content in UML Modeling on PlantUML demo</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Fri, 26 Nov 2021 12:33:16 -0300</lastBuildDate><atom:link href="http://adrianovieira.github.io/plantuml-demo/docs/modeling/uml/index.xml" rel="self" type="application/rss+xml"/><item><title>Docs: Samples Diagrams.md</title><link>http://adrianovieira.github.io/plantuml-demo/docs/modeling/uml/plantuml/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://adrianovieira.github.io/plantuml-demo/docs/modeling/uml/plantuml/</guid><description>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>PlantUML demo – UML Modeling</title><link>http://example.org/docs/modeling/uml/</link><description>Recent content in UML Modeling on PlantUML demo</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Fri, 26 Nov 2021 12:33:16 -0300</lastBuildDate><atom:link href="http://example.org/docs/modeling/uml/index.xml" rel="self" type="application/rss+xml"/><item><title>Docs: Samples Diagrams.md</title><link>http://example.org/docs/modeling/uml/plantuml/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://example.org/docs/modeling/uml/plantuml/</guid><description>
 &lt;h1 id="plantuml-demo">PlantUML demo&lt;/h1>
 &lt;blockquote>
 &lt;p>&lt;em>&amp;ldquo;PlantUML in a nutshell. PlantUML is a component that allows to quickly write: Sequence diagram. Usecase diagram. Class diagram. Object diagram. Activity diagram (here is the legacy syntax) Component diagram. Deployment diagram&amp;rdquo;&lt;/em> - &lt;a href="http://PlantUML.com">PlantUML.com&lt;/a>.&lt;/p>
@@ -42,7 +42,7 @@ Bob-&amp;gt;L: Log transaction
 *** &amp;lt;s&amp;gt;Raspmbc&amp;lt;/s&amp;gt; =&amp;gt; OSMC
 *** &amp;lt;s&amp;gt;Raspyfi&amp;lt;/s&amp;gt; =&amp;gt; Volumio
 @endmindmap
-&lt;/code>&lt;/pre></description></item><item><title>Docs: UML samples.adoc</title><link>http://adrianovieira.github.io/plantuml-demo/docs/modeling/uml/plantuml-samples/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://adrianovieira.github.io/plantuml-demo/docs/modeling/uml/plantuml-samples/</guid><description>
+&lt;/code>&lt;/pre></description></item><item><title>Docs: UML samples.adoc</title><link>http://example.org/docs/modeling/uml/plantuml-samples/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://example.org/docs/modeling/uml/plantuml-samples/</guid><description>
 &lt;div class="sect1">
 &lt;h2 id="_plantuml_sample_diagram">PlantUML sample Diagram&lt;/h2>
 &lt;div class="sectionbody">

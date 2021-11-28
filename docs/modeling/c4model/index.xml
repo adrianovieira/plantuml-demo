@@ -1,4 +1,4 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>PlantUML demo – C4 Model Diagraming</title><link>http://adrianovieira.github.io/plantuml-demo/docs/modeling/c4model/</link><description>Recent content in C4 Model Diagraming on PlantUML demo</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Fri, 26 Nov 2021 12:07:45 -0300</lastBuildDate><atom:link href="http://adrianovieira.github.io/plantuml-demo/docs/modeling/c4model/index.xml" rel="self" type="application/rss+xml"/><item><title>Docs: C4 Model.adoc</title><link>http://adrianovieira.github.io/plantuml-demo/docs/modeling/c4model/plantuml-c4model/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://adrianovieira.github.io/plantuml-demo/docs/modeling/c4model/plantuml-c4model/</guid><description>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>PlantUML demo – C4 Model Diagraming</title><link>http://example.org/docs/modeling/c4model/</link><description>Recent content in C4 Model Diagraming on PlantUML demo</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Fri, 26 Nov 2021 12:07:45 -0300</lastBuildDate><atom:link href="http://example.org/docs/modeling/c4model/index.xml" rel="self" type="application/rss+xml"/><item><title>Docs: C4 Model.adoc</title><link>http://example.org/docs/modeling/c4model/plantuml-c4model/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://example.org/docs/modeling/c4model/plantuml-c4model/</guid><description>
 &lt;div class="sect1">
 &lt;h2 id="_plantuml_sample_diagram">PlantUML sample Diagram&lt;/h2>
 &lt;div class="sectionbody">
@@ -103,7 +103,7 @@ SHOW_LEGEND()
 &lt;/div>
 &lt;/div>
 &lt;/div>
-&lt;/div></description></item><item><title>Docs: Samples Context Diagrams.md</title><link>http://adrianovieira.github.io/plantuml-demo/docs/modeling/c4model/plantuml-c4model-context/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://adrianovieira.github.io/plantuml-demo/docs/modeling/c4model/plantuml-c4model-context/</guid><description>
+&lt;/div></description></item><item><title>Docs: Samples Context Diagrams.md</title><link>http://example.org/docs/modeling/c4model/plantuml-c4model-context/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://example.org/docs/modeling/c4model/plantuml-c4model-context/</guid><description>
 &lt;h1 id="plantuml-demo">PlantUML demo&lt;/h1>
 &lt;blockquote>
 &lt;p>&lt;em>&amp;ldquo;PlantUML in a nutshell. PlantUML is a component that allows to quickly write: Sequence diagram. Usecase diagram. Class diagram. Object diagram. Activity diagram (here is the legacy syntax) Component diagram. Deployment diagram&amp;rdquo;&lt;/em> - &lt;a href="http://PlantUML.com">PlantUML.com&lt;/a>.&lt;/p>
