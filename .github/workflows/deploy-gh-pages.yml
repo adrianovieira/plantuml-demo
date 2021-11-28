@@ -13,13 +13,13 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: update git submodules
-        run: git submodule update --init --recursive
-
       - name: Install alpine packages
         run: |
           apk update
           apk add openssl git asciidoctor nodejs npm hugo
+
+      - name: update git submodules
+        run: git submodule update --init --recursive
 
       - name: Install node modules
         run: |
