@@ -41,10 +41,10 @@ jobs:
           find content -name "*.md" -type f -exec sed -i '/<!---md/d' {} +
           find content -name "*.md" -type f -exec sed -i '/md--->/d' {} +
           
-      - name: Build
+      - name: Build portal
         run: hugo --minify --baseURL ${{secrets.PAGES_BASE_URL}}
 
-      - name: Deploy
+      - name: Update branch to deploy portal
         uses: peaceiris/actions-gh-pages@v3
         if: github.ref == 'refs/heads/main'
         with:
