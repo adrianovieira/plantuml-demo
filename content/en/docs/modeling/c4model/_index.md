@@ -3,7 +3,7 @@ title: "C4 Model Diagraming"
 linktitle: "C4 Model"
 date: 2021-11-26T12:07:45-03:00
 draft: false
-weight: 5
+weight: 20
 icon: fas fa-project-diagram
 menu:
   main:

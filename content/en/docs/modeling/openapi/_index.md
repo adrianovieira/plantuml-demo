@@ -2,7 +2,11 @@
 title: "OpenAPI"
 date: 2021-11-26T12:08:24-03:00
 draft: false
-weight: 15
+weight: 30
+menu:
+  main:
+    weight: 30
+    pre: <i class="fas fa-random"></i>
 ---
 
 # Introduction
