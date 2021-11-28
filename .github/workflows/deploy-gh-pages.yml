@@ -42,13 +42,7 @@ jobs:
           find content -name "*.md" -type f -exec sed -i '/md--->/d' {} +
           
       - name: Build
-        run: hugo --minify
-
-      - name: Upload portal
-        uses: actions/upload-artifact@v2
-        with:
-          name: PlantUML portal
-          path: ./public
+        run: hugo --minify --baseURL ${{secrets.PAGES_BASE_URL}}
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
