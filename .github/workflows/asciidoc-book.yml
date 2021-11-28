@@ -1,10 +1,10 @@
 ---
-name: Generate pdf book file
+name: Generate pdf and epub book files
 on: push
 
 jobs:
   build:
-    name: build pdf book
+    name: build pdf and epub books
     runs-on: ubuntu-latest
     container: asciidoctor/docker-asciidoctor:1.12
     steps:
@@ -16,6 +16,8 @@ jobs:
                   --attribute sourcedir=../../../../../assets/ \
                   --destination-dir build \
                   PlantUML.adoc
+      - name: build epub book file
+        run: |
           asciidoctor-epub3 --require asciidoctor-diagram \
                               --attribute sourcedir=../../../../../assets/ \
                               --destination-dir build \
