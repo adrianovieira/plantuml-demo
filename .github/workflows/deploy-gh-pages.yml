@@ -33,7 +33,7 @@ jobs:
           find content -name "*.md" -type f -exec sed -i '/md--->/d' {} +
 
       - name: Build portal
-        run: hugo --minify
+        run: hugo --minify --baseURL ${{ secrets.PAGES_BASE_URL }}
 
       - name: Deploy portal
         uses: peaceiris/actions-gh-pages@v3
