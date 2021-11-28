@@ -11,12 +11,12 @@ jobs:
     runs-on: ubuntu-latest
     container: alpine:3.15
     steps:
-      - uses: actions/checkout@v2
-
       - name: Install alpine packages
         run: |
           apk update
           apk add openssl git asciidoctor nodejs npm hugo
+
+      - uses: actions/checkout@v2
 
       - name: update git submodules
         run: git submodule update --init --recursive
