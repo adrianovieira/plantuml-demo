@@ -1,0 +1,140 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>PlantUML demo – C4 Model Diagraming</title><link>http://example.org/docs/modeling/c4model/</link><description>Recent content in C4 Model Diagraming on PlantUML demo</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Fri, 26 Nov 2021 12:07:45 -0300</lastBuildDate><atom:link href="http://example.org/docs/modeling/c4model/index.xml" rel="self" type="application/rss+xml"/><item><title>Docs: C4 Model.adoc</title><link>http://example.org/docs/modeling/c4model/plantuml-c4model/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://example.org/docs/modeling/c4model/plantuml-c4model/</guid><description>
+&lt;div class="sect1">
+&lt;h2 id="_plantuml_sample_diagram">PlantUML sample Diagram&lt;/h2>
+&lt;div class="sectionbody">
+&lt;div style="page-break-after: always;">&lt;/div>
+&lt;div class="sect2">
+&lt;h3 id="_c4_model_diagram">C4 Model Diagram&lt;/h3>
+&lt;div class="quoteblock">
+&lt;blockquote>
+&lt;div class="paragraph">
+&lt;p>&lt;em>&amp;#34;The C4 model was designed to help describe, document, and diagram custom-built, bespoke software systems. From this perspective, the C4 model can be used to describe a variety of software architectures (monolithic or distributed), built in a variety of programming languages, deployed on a variety of platforms (on-premises or cloud)&amp;#34;&lt;/em> - &lt;a href="http://C4Model.com">C4Model.com&lt;/a>.&lt;/p>
+&lt;/div>
+&lt;/blockquote>
+&lt;/div>
+&lt;div class="listingblock">
+&lt;div class="title">sample diagram&lt;/div>
+&lt;div class="content">
+&lt;pre class="highlight">&lt;code class="language-plantuml" data-lang="plantuml">@startuml
+!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Container.puml
+Person(admin, &amp;#34;Administrator&amp;#34;)
+System_Boundary(c1, &amp;#34;Sample System&amp;#34;) {
+Container(web_app, &amp;#34;Web Application&amp;#34;, &amp;#34;C#, ASP.NET Core 2.1 MVC&amp;#34;, &amp;#34;Allows users to compare multiple Twitter timelines&amp;#34;)
+}
+System(twitter, &amp;#34;Twitter&amp;#34;)
+Rel(admin, web_app, &amp;#34;Uses&amp;#34;, &amp;#34;HTTPS&amp;#34;)
+Rel(web_app, twitter, &amp;#34;Gets tweets from&amp;#34;, &amp;#34;HTTPS&amp;#34;)
+@enduml&lt;/code>&lt;/pre>
+&lt;/div>
+&lt;/div>
+&lt;div style="page-break-after: always;">&lt;/div>
+&lt;div class="sect3">
+&lt;h4 id="_c4_model_diagram_decorated">C4 Model Diagram (decorated)&lt;/h4>
+&lt;div class="listingblock">
+&lt;div class="title">decoreted diagram&lt;/div>
+&lt;div class="content">
+&lt;pre class="highlight">&lt;code class="language-plantuml" data-lang="plantuml">@startuml
+!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Container.puml
+!define DEVICONS https://raw.githubusercontent.com/tupadr3/plantuml-icon-font-sprites/master/devicons
+!define FONTAWESOME https://raw.githubusercontent.com/tupadr3/plantuml-icon-font-sprites/master/font-awesome-5
+!include DEVICONS/angular.puml
+!include DEVICONS/java.puml
+!include DEVICONS/msql_server.puml
+!include FONTAWESOME/users.puml
+LAYOUT_WITH_LEGEND()
+Person(user, &amp;#34;Customer&amp;#34;, &amp;#34;People that need products&amp;#34;, $sprite=&amp;#34;users&amp;#34;)
+Container(spa, &amp;#34;SPA&amp;#34;, &amp;#34;angular&amp;#34;, &amp;#34;The main interface that the customer interacts with&amp;#34;, $sprite=&amp;#34;angular&amp;#34;)
+Container(api, &amp;#34;API&amp;#34;, &amp;#34;java&amp;#34;, &amp;#34;Handles all business logic&amp;#34;, $sprite=&amp;#34;java&amp;#34;)
+ContainerDb(db, &amp;#34;Database&amp;#34;, &amp;#34;Microsoft SQL&amp;#34;, &amp;#34;Holds product, order and invoice information&amp;#34;, $sprite=&amp;#34;msql_server&amp;#34;)
+Rel(user, spa, &amp;#34;Uses&amp;#34;, &amp;#34;https&amp;#34;)
+Rel(spa, api, &amp;#34;Uses&amp;#34;, &amp;#34;https&amp;#34;)
+Rel_R(api, db, &amp;#34;Reads/Writes&amp;#34;)
+@enduml&lt;/code>&lt;/pre>
+&lt;/div>
+&lt;/div>
+&lt;div class="paragraph">
+&lt;p>Sample with tag dependent sprites and custom legend text, for example:&lt;/p>
+&lt;/div>
+&lt;div class="listingblock">
+&lt;div class="title">decoreted diagram with tags&lt;/div>
+&lt;div class="content">
+&lt;pre class="highlight">&lt;code class="language-plantuml" data-lang="plantuml">@startuml
+!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Container.puml
+!define osaPuml https://raw.githubusercontent.com/Crashedmind/PlantUML-opensecurityarchitecture2-icons/master
+!include osaPuml/Common.puml
+!include osaPuml/User/all.puml
+!include &amp;lt;office/Servers/database_server&amp;gt;
+!include &amp;lt;office/Servers/file_server&amp;gt;
+!include &amp;lt;office/Servers/application_server&amp;gt;
+!include &amp;lt;office/Concepts/service_application&amp;gt;
+!include &amp;lt;office/Concepts/firewall&amp;gt;
+AddExternalPersonTag(&amp;#34;anonymous_ext&amp;#34;, $sprite=&amp;#34;osa_user_black_hat&amp;#34;, $legendText=&amp;#34;anonymous user&amp;#34;)
+AddPersonTag(&amp;#34;customer&amp;#34;, $sprite=&amp;#34;osa_user_large_group&amp;#34;, $legendText=&amp;#34;aggregated user&amp;#34;)
+AddPersonTag(&amp;#34;admin&amp;#34;, $sprite=&amp;#34;osa_user_audit,color=red&amp;#34;, $legendSprite=&amp;#34;osa_user_audit,scale=0.25,color=red&amp;#34;, $legendText=&amp;#34;administration user&amp;#34;)
+AddContainerTag(&amp;#34;webApp&amp;#34;, $sprite=&amp;#34;application_server&amp;#34;, $legendText=&amp;#34;web app container&amp;#34;)
+AddContainerTag(&amp;#34;db&amp;#34;, $sprite=&amp;#34;database_server&amp;#34;, $legendText=&amp;#34;database container&amp;#34;)
+AddContainerTag(&amp;#34;files&amp;#34;, $sprite=&amp;#34;file_server&amp;#34;, $legendText=&amp;#34;file server container&amp;#34;)
+AddContainerTag(&amp;#34;conApp&amp;#34;, $sprite=&amp;#34;service_application&amp;#34;, $legendText=&amp;#34;console app container&amp;#34;)
+AddRelTag(&amp;#34;firewall&amp;#34;, $textColor=&amp;#34;$ARROW_COLOR&amp;#34;, $lineColor=&amp;#34;$ARROW_COLOR&amp;#34;, $sprite=&amp;#34;firewall,scale=0.3,color=red&amp;#34;, $legendText=&amp;#34;firewall&amp;#34;)
+Person_Ext(anonymous_user, &amp;#34;Bob&amp;#34;, $tags=&amp;#34;anonymous_ext&amp;#34;)
+Person(aggregated_user, &amp;#34;Sam, Ivone&amp;#34;, $tags=&amp;#34;customer&amp;#34;)
+Person(administration_user, &amp;#34;Bernd&amp;#34;, $tags=&amp;#34;admin&amp;#34;)
+System_Boundary(c1, &amp;#34;techtribes.js&amp;#34;){
+Container(web_app, &amp;#34;Web Application&amp;#34;, &amp;#34;Java, Spring MVC, Tomcat 7.x&amp;#34;, $tags=&amp;#34;webApp&amp;#34;)
+ContainerDb(rel_db, &amp;#34;Relational Database&amp;#34;, &amp;#34;MySQL 5.5.x&amp;#34;, $tags=&amp;#34;db&amp;#34;)
+Container(filesystem, &amp;#34;File System&amp;#34;, &amp;#34;FAT32&amp;#34;, $tags=&amp;#34;files&amp;#34;)
+ContainerDb(nosql, &amp;#34;NoSQL Data Store&amp;#34;, &amp;#34;MongoDB 2.2.x&amp;#34;, $tags=&amp;#34;db&amp;#34;)
+Container(updater, &amp;#34;Updater&amp;#34;, &amp;#34;Java 7 Console App&amp;#34;, $tags=&amp;#34;conApp&amp;#34;)
+}
+Rel(anonymous_user, web_app, &amp;#34;Uses&amp;#34;, &amp;#34;HTTPS&amp;#34;, $tags=&amp;#34;firewall&amp;#34;)
+Rel(aggregated_user, web_app, &amp;#34;Uses&amp;#34;, &amp;#34;HTTPS&amp;#34;, $tags=&amp;#34;firewall&amp;#34;)
+Rel(administration_user, web_app, &amp;#34;Uses&amp;#34;, &amp;#34;HTTPS&amp;#34;, $tags=&amp;#34;firewall&amp;#34;)
+Rel(web_app, rel_db, &amp;#34;Reads from and writes to&amp;#34;, &amp;#34;SQL/JDBC, port 3306&amp;#34;)
+Rel(web_app, filesystem, &amp;#34;Reads from&amp;#34;)
+Rel(web_app, nosql, &amp;#34;Reads from&amp;#34;, &amp;#34;MongoDB wire protocol, port 27017&amp;#34;)
+Rel_U(updater, rel_db, &amp;#34;Reads from and writes data to&amp;#34;, &amp;#34;SQL/JDBC, port 3306&amp;#34;)
+Rel_U(updater, filesystem, &amp;#34;Writes to&amp;#34;)
+Rel_U(updater, nosql, &amp;#34;Reads from and writes to&amp;#34;, &amp;#34;MongoDB wire protocol, port 27017&amp;#34;)
+Lay_R(rel_db, filesystem)
+SHOW_LEGEND()
+@enduml&lt;/code>&lt;/pre>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;/div></description></item><item><title>Docs: Samples Context Diagrams.md</title><link>http://example.org/docs/modeling/c4model/plantuml-c4model-context/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://example.org/docs/modeling/c4model/plantuml-c4model-context/</guid><description>
+&lt;h1 id="plantuml-demo">PlantUML demo&lt;/h1>
+&lt;blockquote>
+&lt;p>&lt;em>&amp;ldquo;PlantUML in a nutshell. PlantUML is a component that allows to quickly write: Sequence diagram. Usecase diagram. Class diagram. Object diagram. Activity diagram (here is the legacy syntax) Component diagram. Deployment diagram&amp;rdquo;&lt;/em> - &lt;a href="http://PlantUML.com">PlantUML.com&lt;/a>.&lt;/p>
+&lt;/blockquote>
+&lt;h2 id="getting-started">Getting started&lt;/h2>
+&lt;h3 id="c4-model-diagram">C4 Model Diagram&lt;/h3>
+&lt;blockquote>
+&lt;p>&lt;em>&amp;ldquo;The C4 model was designed to help describe, document, and diagram custom-built, bespoke software systems. From this perspective, the C4 model can be used to describe a variety of software architectures (monolithic or distributed), built in a variety of programming languages, deployed on a variety of platforms (on-premises or cloud)&amp;quot;&lt;/em> - &lt;a href="http://C4Model.com">C4Model.com&lt;/a>.&lt;/p>
+&lt;/blockquote>
+&lt;pre tabindex="0">&lt;code class="language-plantuml" data-lang="plantuml">!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Container.puml
+Person(admin, &amp;quot;Administrator&amp;quot;)
+System_Boundary(c1, &amp;quot;Sample System&amp;quot;) {
+Container(web_app, &amp;quot;Web Application&amp;quot;, &amp;quot;C#, ASP.NET Core 2.1 MVC&amp;quot;, &amp;quot;Allows users to compare multiple Twitter timelines&amp;quot;)
+}
+System(twitter, &amp;quot;Twitter&amp;quot;)
+Rel(admin, web_app, &amp;quot;Uses&amp;quot;, &amp;quot;HTTPS&amp;quot;)
+Rel(web_app, twitter, &amp;quot;Gets tweets from&amp;quot;, &amp;quot;HTTPS&amp;quot;)
+&lt;/code>&lt;/pre>&lt;h4 id="c4-model-diagram-decorated">C4 Model Diagram (decorated)&lt;/h4>
+&lt;pre tabindex="0">&lt;code class="language-plantuml" data-lang="plantuml">!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Container.puml
+!define DEVICONS https://raw.githubusercontent.com/tupadr3/plantuml-icon-font-sprites/master/devicons
+!define FONTAWESOME https://raw.githubusercontent.com/tupadr3/plantuml-icon-font-sprites/master/font-awesome-5
+!include DEVICONS/angular.puml
+!include DEVICONS/java.puml
+!include DEVICONS/msql_server.puml
+!include FONTAWESOME/users.puml
+LAYOUT_WITH_LEGEND()
+Person(user, &amp;quot;Customer&amp;quot;, &amp;quot;People that need products&amp;quot;, $sprite=&amp;quot;users&amp;quot;)
+Container(spa, &amp;quot;SPA&amp;quot;, &amp;quot;angular&amp;quot;, &amp;quot;The main interface that the customer interacts with&amp;quot;, $sprite=&amp;quot;angular&amp;quot;)
+Container(api, &amp;quot;API&amp;quot;, &amp;quot;java&amp;quot;, &amp;quot;Handles all business logic&amp;quot;, $sprite=&amp;quot;java&amp;quot;)
+ContainerDb(db, &amp;quot;Database&amp;quot;, &amp;quot;Microsoft SQL&amp;quot;, &amp;quot;Holds product, order and invoice information&amp;quot;, $sprite=&amp;quot;msql_server&amp;quot;)
+Rel(user, spa, &amp;quot;Uses&amp;quot;, &amp;quot;https&amp;quot;)
+Rel(spa, api, &amp;quot;Uses&amp;quot;, &amp;quot;https&amp;quot;)
+Rel_R(api, db, &amp;quot;Reads/Writes&amp;quot;)
+&lt;/code>&lt;/pre></description></item></channel></rss>

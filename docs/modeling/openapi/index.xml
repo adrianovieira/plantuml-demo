@@ -1,0 +1,15 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>PlantUML demo – OpenAPI</title><link>http://example.org/docs/modeling/openapi/</link><description>Recent content in OpenAPI on PlantUML demo</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Fri, 26 Nov 2021 12:08:24 -0300</lastBuildDate><atom:link href="http://example.org/docs/modeling/openapi/index.xml" rel="self" type="application/rss+xml"/><item><title>Docs: Petstore OpenAPI</title><link>http://example.org/docs/modeling/openapi/petstore/</link><pubDate>Fri, 26 Nov 2021 12:08:24 -0300</pubDate><guid>http://example.org/docs/modeling/openapi/petstore/</guid><description>
+&lt;div id="ohpen_swagger_ui">&lt;/div>
+&lt;script>
+window.onload = function () {
+const ui = SwaggerUIBundle({
+url: "/openapi/petstore.yaml",
+dom_id: '#ohpen_swagger_ui',
+presets: [
+SwaggerUIBundle.presets.apis,
+SwaggerUIStandalonePreset
+]
+});
+window.ui = ui;
+};
+&lt;/script></description></item></channel></rss>
