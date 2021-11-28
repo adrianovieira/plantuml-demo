@@ -12,13 +12,13 @@ jobs:
         uses: actions/checkout@v2
       - name: build pdf book file
         run: |
-          - asciidoctor-pdf --require asciidoctor-diagram
-                  --attribute sourcedir=../../../../../assets/
-                  --destination-dir build
+          asciidoctor-pdf --require asciidoctor-diagram \
+                  --attribute sourcedir=../../../../../assets/ \
+                  --destination-dir build \
                   PlantUML.adoc
-          - asciidoctor-epub3 --require asciidoctor-diagram
-                              --attribute sourcedir=../../../../../assets/
-                              --destination-dir build
+          asciidoctor-epub3 --require asciidoctor-diagram \
+                              --attribute sourcedir=../../../../../assets/ \
+                              --destination-dir build \
                               PlantUML.adoc
       - name: Upload pdf file
         uses: actions/upload-artifact@v2
