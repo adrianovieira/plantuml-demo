@@ -26,6 +26,10 @@ jobs:
           sudo apt-get -q update
           sudo apt-get install --quiet --assume-yes asciidoctor
 
+      - name: update git submodules
+        run: |
+          git submodule update --init --recursive
+
       - name: install node modules
         run: |
           npm install
